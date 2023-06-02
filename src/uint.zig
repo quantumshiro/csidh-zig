@@ -5,7 +5,7 @@ const expectEqual = testing.expectEqual;
 const uint = @import("params.zig").uint;
 const limbs = @import("params.zig").LIMBS;
 
-const one: uint = .{ .c = [_]u64{1} };
+pub const one: uint = .{ .c = [_]u64{1} };
 
 pub fn set(x: *uint, y: u64) void {
     x.c[0] = y;
