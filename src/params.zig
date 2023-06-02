@@ -1,21 +1,21 @@
-const LIMBS = 64;
-const uint = struct {
+pub const LIMBS = 64;
+pub const uint = struct {
     c: [LIMBS]u64,
 };
 
-const fp = struct {
+pub const fp = struct {
     c: [LIMBS]u64,
 };
 
-const proj = struct {
+pub const proj = struct {
     x: fp,
     z: fp,
 };
 
-const NUM_PRIMES = 130;
-const MAX_EXPONENT = 2; // (2*2+1)^130 is > 2^256
+pub const NUM_PRIMES = 130;
+pub const MAX_EXPONENT = 2; // (2*2+1)^130 is > 2^256
 
-const prime: [NUM_PRIMES]u32 = [_]u32{
+pub const prime: [NUM_PRIMES]u32 = [_]u32{
     3,   5,   7,   11,  13,  17,  19,  23,  29,  31,  37,  41,  43,
     47,  53,  59,  61,  67,  71,  73,  79,  83,  89,  97,  101, 103,
     107, 109, 113, 127, 131, 137, 139, 149, 151, 157, 163, 167, 173,
